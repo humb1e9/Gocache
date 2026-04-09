@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package cache.v1;
+
+option go_package = "gocache/api/pb;pb";
+
+service CacheService {
+  rpc Get(CacheGetRequest) returns (CacheGetResponse);
+  rpc Ping(PingRequest) returns (PingResponse);
+}
+
+message CacheGetRequest {
+  string group = 1;
+  string key = 2;
+}
+
+message CacheGetResponse {
+  bytes value = 1;
+}
+
+message PingRequest {}
+
+message PingResponse {
+  string node = 1;
+  int64 timestamp = 2;
+  string message = 3;
+}

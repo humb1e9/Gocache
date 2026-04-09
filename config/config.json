@@ -1,0 +1,13 @@
+{
+  "node_id": "node1",
+  "grpc_addr": "127.0.0.1:50051",
+  "http_addr": "127.0.0.1:8080",
+  "group": "scores",
+  "policy": "lru",
+  "cache_bytes": 67108864,
+  "etcd_endpoints": [
+    "127.0.0.1:2379"
+  ],
+  "service_prefix": "/services/gocache/nodes",
+  "lease_ttl": 10
+}
